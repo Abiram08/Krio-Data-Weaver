@@ -32,9 +32,10 @@ const HistoricalTrends: React.FC<HistoricalTrendsProps> = ({ city, symbol, weath
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        if (city && symbol) fetchTrends();
-    }, [city, symbol, weatherVariable, stockVariable]);
+    // Auto-fetch disabled - only load after button click
+    // useEffect(() => {
+    //     if (city && symbol) fetchTrends();
+    // }, [city, symbol, weatherVariable, stockVariable]);
 
     const fetchTrends = async () => {
         setLoading(true);

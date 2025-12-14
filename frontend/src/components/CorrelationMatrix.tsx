@@ -17,11 +17,12 @@ const CorrelationMatrix: React.FC<CorrelationMatrixProps> = ({ city, symbol, dat
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        if (city && symbol) {
-            fetchMatrix();
-        }
-    }, [city, symbol, dateRange]);
+    // Auto-fetch disabled - only load after button click
+    // useEffect(() => {
+    //     if (city && symbol) {
+    //         fetchMatrix();
+    //     }
+    // }, [city, symbol, dateRange]);
 
     const fetchMatrix = async () => {
         setLoading(true);
