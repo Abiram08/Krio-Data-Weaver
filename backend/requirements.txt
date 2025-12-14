@@ -1,0 +1,45 @@
+# Flask and Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+Flask-SQLAlchemy==3.0.5
+Flask-Migrate==4.0.5
+
+# Database
+# psycopg2-binary==2.9.7  # Not needed - using SQLite instead of PostgreSQL
+SQLAlchemy==2.0.21
+
+# Data Processing and Analysis
+pandas==2.1.1
+numpy==1.26.0
+scipy==1.11.3
+
+# Caching and Task Queue
+redis==5.0.0
+
+# HTTP Client
+requests==2.31.0
+httpx==0.25.0
+
+# AI Integration
+google-generativeai==0.3.2  # For Gemini AI insights
+
+# Environment and Configuration
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.4.2
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+hypothesis==6.88.1
+
+# Code Quality
+black==23.9.1
+flake8==6.1.0
+mypy==1.5.1
+
+# Production Server
+gunicorn==21.2.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
