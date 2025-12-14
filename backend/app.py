@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from backend.config import get_config
 from backend.models import init_db
 from backend.routes import data_bp, correlation_bp
+import backend.routes.correlation_extended  # Registers /matrix and /trends routes
 
 # Configure logging
 logging.basicConfig(
@@ -59,7 +60,7 @@ def create_app(config_name=None):
     
     # Register blueprints
     app.register_blueprint(data_bp)
-    app.register_blueprint(correlation_bp)
+    app.register_blueprint(correlation_bp)  # Includes extended routes from correlation_extended.py
     
     # Health check endpoint
     @app.route('/api/health', methods=['GET'])

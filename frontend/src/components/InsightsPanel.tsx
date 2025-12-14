@@ -71,21 +71,21 @@ const InsightsPanel: React.FC<InsightsPanelProps> = ({ correlation, weatherData 
 
     return (
         <div className="mt-6">
-            <h2 className="text-2xl font-semibold text-white mb-4">Insights & Analysis</h2>
+            <h2 className="text-2xl font-semibold text-black mb-4">Insights & Analysis</h2>
 
-            <div className="card bg-gradient-to-br from-indigo-900/30 to-purple-900/30">
+            <div className="card bg-white border-2 border-gray-200">
                 <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 mt-1">
                         {getInsightIcon(correlation.p_value)}
                     </div>
 
                     <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-white mb-3">
+                        <h3 className="text-lg font-semibold text-black mb-3">
                             Statistical Analysis
                         </h3>
 
                         <div className="prose prose-invert max-w-none">
-                            <p className="text-slate-300 leading-relaxed">
+                            <p className="text-black leading-relaxed">
                                 {correlation.analysis_notes}
                             </p>
                         </div>
@@ -93,29 +93,29 @@ const InsightsPanel: React.FC<InsightsPanelProps> = ({ correlation, weatherData 
                         <div className="mt-6 pt-6 border-t border-slate-700">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                                 <div>
-                                    <p className="text-slate-500 font-medium">Data Sources</p>
-                                    <p className="text-white mt-1">
+                                    <p className="text-black font-medium">Data Sources</p>
+                                    <p className="text-black mt-1">
                                         {correlation.city} weather × {correlation.symbol} stock prices
                                     </p>
                                 </div>
 
                                 <div>
-                                    <p className="text-slate-500 font-medium">Variables Analyzed</p>
-                                    <p className="text-white mt-1">
+                                    <p className="text-black font-medium">Variables Analyzed</p>
+                                    <p className="text-black mt-1">
                                         {correlation.weather_variable} vs {correlation.stock_variable}
                                     </p>
                                 </div>
 
                                 <div>
-                                    <p className="text-slate-500 font-medium">Time Period</p>
-                                    <p className="text-white mt-1">
+                                    <p className="text-black font-medium">Time Period</p>
+                                    <p className="text-black mt-1">
                                         {correlation.period_days} days
                                     </p>
                                 </div>
 
                                 <div>
-                                    <p className="text-slate-500 font-medium">Analysis Date</p>
-                                    <p className="text-white mt-1">
+                                    <p className="text-black font-medium">Analysis Date</p>
+                                    <p className="text-black mt-1">
                                         {new Date(correlation.calculated_at).toLocaleDateString()}
                                     </p>
                                 </div>
@@ -124,7 +124,7 @@ const InsightsPanel: React.FC<InsightsPanelProps> = ({ correlation, weatherData 
                     </div>
 
                     <div className="mt-6 pt-6 border-t border-slate-700">
-                        <h4 className="text-sm font-semibold text-slate-400 mb-3">Export Options</h4>
+                        <h4 className="text-sm font-semibold text-black mb-3">Export Options</h4>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                             <button
                                 onClick={handleExportCSV}

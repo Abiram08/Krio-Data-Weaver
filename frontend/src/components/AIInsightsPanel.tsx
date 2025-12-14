@@ -39,7 +39,7 @@ const AIInsightsPanel: React.FC<AIInsightsPanelProps> = ({ correlationId }) => {
         <div className="mt-6">
             <button
                 onClick={() => setExpanded(!expanded)}
-                className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-[#4A90A4] to-[#6B8E4E] text-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                className="w-full flex items-center justify-between p-4 bg-white border-2 border-gray-300 text-black rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
             >
                 <div className="flex items-center space-x-3">
                     <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,7 +92,7 @@ const AIInsightsPanel: React.FC<AIInsightsPanelProps> = ({ correlationId }) => {
                         <div className="space-y-6">
                             <div className="flex items-center justify-between pb-4 border-b border-[#C15F3C]/20">
                                 <h3 className="text-xl font-bold text-[#C15F3C]">AI Analysis</h3>
-                                <span className="px-3 py-1 bg-gradient-to-r from-[#4A90A4] to-[#6B8E4E] text-white text-xs font-semibold rounded-full">
+                                <span className="px-3 py-1 bg-white border border-gray-300 text-black text-xs font-semibold rounded-full">
                                     POWERED BY GEMINI
                                 </span>
                             </div>

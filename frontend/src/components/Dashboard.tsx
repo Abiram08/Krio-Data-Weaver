@@ -87,10 +87,8 @@ const Dashboard: React.FC = () => {
         }
     };
 
-    // Load initial data
-    useEffect(() => {
-        handleRefresh(city, symbol, dateRange);
-    }, []);
+    // Load initial data - REMOVED auto-analysis
+    // User must click "Analyze Correlation" button to start
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">

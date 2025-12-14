@@ -15,7 +15,7 @@ const MetricsPanel: React.FC<MetricsPanelProps> = ({ correlation }) => {
         const absValue = Math.abs(value);
         if (absValue >= 0.7) return 'text-green-400';
         if (absValue >= 0.4) return 'text-yellow-400';
-        return 'text-slate-400';
+        return 'text-black';
     };
 
     const getSignificanceColor = (pValue: number): string => {
@@ -41,18 +41,18 @@ const MetricsPanel: React.FC<MetricsPanelProps> = ({ correlation }) => {
 
     return (
         <div className="mt-6">
-            <h2 className="text-2xl font-semibold text-white mb-4">Key Metrics</h2>
+            <h2 className="text-2xl font-semibold text-black mb-4">Key Metrics</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {/* Correlation Coefficient */}
-                <div className="card bg-gradient-to-br from-primary-900/50 to-primary-800/30">
+                <div className="card bg-white border-2 border-gray-200">
                     <div className="flex items-center justify-between">
                         <div>
-                            <p className="text-sm text-slate-400">Correlation Coefficient</p>
+                            <p className="text-sm text-black">Correlation Coefficient</p>
                             <p className={`text-3xl font-bold mt-2 ${getCorrelationColor(correlation.correlation_value)}`}>
                                 {correlation.correlation_value.toFixed(3)}
                             </p>
-                            <p className="text-xs text-slate-500 mt-1">
+                            <p className="text-xs text-black mt-1">
                                 {getCorrelationStrength(correlation.correlation_value)}
                             </p>
                         </div>
@@ -71,14 +71,14 @@ const MetricsPanel: React.FC<MetricsPanelProps> = ({ correlation }) => {
                 </div>
 
                 {/* P-Value */}
-                <div className="card bg-gradient-to-br from-secondary-900/50 to-secondary-800/30">
+                <div className="card bg-white border-2 border-gray-200">
                     <div className="flex items-center justify-between">
                         <div>
-                            <p className="text-sm text-slate-400">Statistical Significance</p>
+                            <p className="text-sm text-black">Statistical Significance</p>
                             <p className={`text-3xl font-bold mt-2 ${getSignificanceColor(correlation.p_value)}`}>
                                 {correlation.p_value < 0.001 ? '<0.001' : correlation.p_value.toFixed(4)}
                             </p>
-                            <p className="text-xs text-slate-500 mt-1">
+                            <p className="text-xs text-black mt-1">
                                 {getSignificanceLevel(correlation.p_value)}
                             </p>
                         </div>
@@ -97,19 +97,19 @@ const MetricsPanel: React.FC<MetricsPanelProps> = ({ correlation }) => {
                 </div>
 
                 {/* Sample Size */}
-                <div className="card bg-gradient-to-br from-slate-800/50 to-slate-700/30">
+                <div className="card bg-white border-2 border-gray-200">
                     <div className="flex items-center justify-between">
                         <div>
-                            <p className="text-sm text-slate-400">Sample Size</p>
-                            <p className="text-3xl font-bold text-white mt-2">
+                            <p className="text-sm text-black">Sample Size</p>
+                            <p className="text-3xl font-bold text-black mt-2">
                                 {correlation.sample_size}
                             </p>
-                            <p className="text-xs text-slate-500 mt-1">
+                            <p className="text-xs text-black mt-1">
                                 {correlation.period_days} days
                             </p>
                         </div>
                         <svg
-                            className="w-12 h-12 text-slate-600"
+                            className="w-12 h-12 text-black"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -123,14 +123,14 @@ const MetricsPanel: React.FC<MetricsPanelProps> = ({ correlation }) => {
                 </div>
 
                 {/* Anomalies */}
-                <div className="card bg-gradient-to-br from-red-900/50 to-red-800/30">
+                <div className="card bg-white border-2 border-gray-200">
                     <div className="flex items-center justify-between">
                         <div>
-                            <p className="text-sm text-slate-400">Anomalies Detected</p>
-                            <p className="text-3xl font-bold text-white mt-2">
+                            <p className="text-sm text-black">Anomalies Detected</p>
+                            <p className="text-3xl font-bold text-black mt-2">
                                 {correlation.anomalies_detected}
                             </p>
-                            <p className="text-xs text-slate-500 mt-1">
+                            <p className="text-xs text-black mt-1">
                                 Outliers
                             </p>
                         </div>
